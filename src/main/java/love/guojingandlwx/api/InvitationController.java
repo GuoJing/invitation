@@ -11,6 +11,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class InvitationController {
 
+    /**
+     * Hello string.
+     *
+     * @return the string
+     */
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public final String hello() {
         return "Hello World!";
