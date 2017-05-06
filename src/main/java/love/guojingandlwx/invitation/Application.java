@@ -1,4 +1,4 @@
-package love.guojingandlwx;
+package love.guojingandlwx.invitation;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

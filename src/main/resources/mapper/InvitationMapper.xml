@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="InvitationMapper">
+
+  <resultMap id="BaseResultMap" type="love.guojingandlwx.invitation.domain.InvitationDomain">
+    <id column="id" property="id" />
+    <result column="name" property="name" />
+    <result column="phone" property="phone" />
+    <result column="number" property="number" />
+  </resultMap>
+
+  <insert id="create" parameterType="java.util.HashMap" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
+    insert into invitation (name, phone, number) values (#{name}, #{phone}, #{number})
+  </insert>
+
+  <select id="findAll" resultMap="BaseResultMap">
+    select id, name, phone, number from invitation order by id desc
+  </select>
+</mapper>
